@@ -58,16 +58,16 @@ resource "aws_emr_cluster" "emr-spark-cluster" {
       name              = "Copy script file from s3."
       action_on_failure = "CONTINUE"
 
-      hadoop_jar_step {
+      hadoop_jar_step = {
         jar  = "command-runner.jar"
         args = ["aws", "s3", "cp", "s3://${var.name}/scripts/pyspark_quick_setup.sh", "/home/hadoop/"]
       }
-    },
+        },
     {
       name              = "Setup pyspark with conda."
       action_on_failure = "CONTINUE"
 
-      hadoop_jar_step {
+      hadoop_jar_step = {
         jar  = "command-runner.jar"
         args = ["sudo", "bash", "/home/hadoop/pyspark_quick_setup.sh"]
       }
