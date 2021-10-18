@@ -4,8 +4,8 @@ terraform {
 
   backend "s3" {
     encrypt = true
-    bucket  = "terraform-persistence"
-    key     = "terraform-emr-pyspark.tfstate"
+    bucket  = "terraform-persistence-049879"
+    key     = ".terraform/terraform.tfstate/terraform-emr-pyspark.tfstate"
     region  = "us-east-1"
     profile = "terraform"
   }
