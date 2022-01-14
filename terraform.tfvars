@@ -14,5 +14,5 @@ master_ebs_size      = "50"
 
 # Slave nodes configurations
 core_instance_type  = "m3.xlarge"
-core_instance_count = 1
+core_instance_count = 2
 core_ebs_size       = "50"
