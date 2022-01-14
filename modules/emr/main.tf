@@ -15,7 +15,7 @@ resource "aws_emr_cluster" "emr-spark-cluster" {
 
   ebs_root_volume_size = "12"
 
-  resource "aws_emr_instance_group" "task" {
+  aws_emr_instance_group {
     name           = "EMR master"
     instance_role  = "MASTER"
     instance_type  = "${var.master_instance_type}"
@@ -28,7 +28,7 @@ resource "aws_emr_cluster" "emr-spark-cluster" {
     }
   }
 
-  resource "aws_emr_instance_group" "task" {
+  aws_emr_instance_group {
     name           = "EMR slave"
     instance_role  = "CORE"
     instance_type  = "${var.core_instance_type}"
