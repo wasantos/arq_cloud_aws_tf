@@ -4,7 +4,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "arq-cloud-recebidos" {
-  bucket = "arq-cloud-bucket-recebidos-049877"
+  bucket = "s3-835158247870-arq-cloud-bucket-recebidos"
   acl    = "private"
 
   tags = {
@@ -17,7 +17,7 @@ resource "aws_s3_bucket" "arq-cloud-recebidos" {
 }
 
 resource "aws_s3_bucket" "arq-cloud-processados" {
-  bucket = "arq-cloud-bucket-processados-049878"
+  bucket = "s3-835158247870-arq-cloud-bucket-processados"
   acl    = "private"
 
   tags = {

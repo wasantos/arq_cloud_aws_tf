@@ -47,8 +47,8 @@ resource "aws_security_group" "emr_slave" {
   revoke_rules_on_delete = true
 
   ingress {
-    from_port   = 22
-    to_port     = 22
+    from_port   = 221
+    to_port     = 221
     protocol    = "tcp"
     cidr_blocks = ["${var.ingress_cidr_blocks}"]
   }
