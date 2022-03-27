@@ -29,6 +29,19 @@ resource "aws_s3_bucket" "arq-cloud-processados" {
   }
 }
 
+resource "aws_s3_bucket" "arq-cloud-saida" {
+  bucket = "s3-835158247870-arq-cloud-bucket-saida"
+  acl    = "private"
+
+  tags = {
+    Name        = "bucket_saida"
+    Environment = "Dev"
+    ManagedBy   = "Terraform"
+    Owner       = "Willian A Santos"
+    UpdatedAt   = "2021-10-15"
+  }
+}
+
 module "s3" {
   source = "./modules/s3"
   name   = var.name
